@@ -22,7 +22,9 @@ public class Biblioteca {
 				//Verifica se Isbn não esta em branco 
 				&& livro.getIsbn().length() != 0
 				//Verifica se titulo não esta em branco 
-				&& livro.getTitulo().length() != 0){
+				&& livro.getTitulo().length() != 0
+				//Verifica se autor não esta em branco 
+				&& livro.getAutor().length() != 0){
 			livros.add(livro);
 		}
 	}
