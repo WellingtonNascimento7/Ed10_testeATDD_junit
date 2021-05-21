@@ -28,8 +28,16 @@ public class Livro {
 		return titulo;
 	}
 
-	public void setTitulo(String titulo) {
-		this.titulo = titulo;
+	public String setTitulo(String titulo) {
+		String mensagem = null;
+		if (titulo.equals("")) {
+			mensagem = "Informações inválidas";	
+			//adicionado para testar a validação na clase biblioteca
+			this.titulo = titulo;
+		} else {
+			this.titulo = titulo;
+		}
+		return mensagem;		
 	}
 
 	public String getAutor() {

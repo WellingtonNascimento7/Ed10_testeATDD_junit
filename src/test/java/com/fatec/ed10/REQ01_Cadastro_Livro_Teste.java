@@ -55,5 +55,20 @@ class REQ01_Cadastro_Livro_Teste {
         //entao o total de livros cadastrados deve ser igual 0
         assertEquals(0, biblioteca.size());
     }
+	
+	@Test
+    public void ct04_quando_cadastrar_livro_com_titulo_em_branco() {
+        Biblioteca biblioteca = new Biblioteca();
+        //quando um livro é cadastrado com titulo em branco
+        Livro umLivro = new Livro();
+        umLivro.setAutor("Pressman");;
+        umLivro.setIsbn("1111");
+        String mens = umLivro.setTitulo("");
+      //Verifica se foi enviado  a mensagem de dados invalidos
+        assertTrue(!mens.equals(null));
+        biblioteca.save(umLivro);
+        //entao o total de livros cadastrados deve ser igual 0
+        assertEquals(0, biblioteca.size());
+    }
 
 }
