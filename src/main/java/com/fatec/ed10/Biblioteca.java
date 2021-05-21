@@ -18,7 +18,9 @@ public class Biblioteca {
 	public void save(Livro livro) {
 //		livros.add(livro);
 //		validação de livro com isbn ja cadastrado usando funções lambda 
-		if(livros.stream().noneMatch(l -> l.getIsbn().equals(livro.getIsbn()))){
+		if(livros.stream().noneMatch(l -> l.getIsbn().equals(livro.getIsbn())) 
+				//Verifica se Isbn não esta em branco 
+				&& livro.getIsbn().length() != 0){
 			livros.add(livro);
 		}
 	}

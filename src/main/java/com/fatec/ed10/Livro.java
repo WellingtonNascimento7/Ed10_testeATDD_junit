@@ -15,8 +15,9 @@ public class Livro {
 	public String setIsbn(String isbn) {
 		String mensagem = null;
 		if (isbn.equals("")) {
-			mensagem = "Informações inválidas";
-			System.out.println(mensagem);
+			mensagem = "Informações inválidas";	
+			//adicionado para testar a validação na clase biblioteca
+			this.isbn = isbn;
 		} else {
 			this.isbn = isbn;
 		}
